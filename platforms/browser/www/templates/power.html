@@ -1,3 +1,32 @@
 <ion-view title="Power" id="page2">
-  <ion-content padding="true" class="has-header"></ion-content>
+	<ion-content class="has-header">
+		<div class="gauge gauge-style"></div>
+		<script>
+			$('.gauge').gauge({
+				values: {
+					0 : '0%',
+					20: '20%',
+					40: '40%',
+					60: '60%',
+					80: '80%',
+					100: '100%'
+				},
+				colors: {
+					0 : '#378618',
+					60: '#ffa500',
+					90: '#f00'
+				},
+				angles: [
+				180,
+				360
+				],
+				lineWidth: 10,
+				arrowWidth: 10,
+				arrowColor: '#aaa',
+				inset:true,
+
+				value: 30
+			});
+		</script>
+	</ion-content>
 </ion-view>

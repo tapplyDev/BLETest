@@ -1,8 +1,12 @@
 <ion-view title="Power" id="page2">
 	<ion-content class="has-header">
-		<div class="gauge gauge-style"></div>
+		<div class="gauge-power gauge-power"></div>
+		<div style="text-align:center; margin-top: -10vw">
+			<div class="gauge-temp gauge-temp"></div>
+			<div class="gauge-battery gauge-battery"></div>
+		</div> 
 		<script>
-			$('.gauge').gauge({
+			$('.gauge-power').gauge({
 				values: {
 					0 : '0%',
 					20: '20%',
@@ -24,8 +28,45 @@
 				arrowWidth: 10,
 				arrowColor: '#aaa',
 				inset:true,
-
 				value: 30
+			});
+			$('.gauge-temp').gauge({
+				values: {
+					0 : 'Safe',
+					100: 'H'
+				},
+				colors: {
+					0 : '#666',
+					80: '#f00'
+				},
+				angles: [
+				90,
+				180
+				],
+				lineWidth: 15,
+				arrowWidth: 10,
+				arrowColor: '#aaa',
+				inset:true,
+				value: 50
+			});
+			$('.gauge-battery').gauge({
+				values: {
+					0 : 'Full',
+					100: 'Low'
+				},
+				colors: {
+					0 : '#666',
+					80: '#f00'
+				},
+				angles: [
+				0,
+				90
+				],
+				lineWidth: 15,
+				arrowWidth: 10,
+				arrowColor: '#aaa',
+				inset:true,
+				value: 50
 			});
 		</script>
 	</ion-content>
